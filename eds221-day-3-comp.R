@@ -19,18 +19,15 @@ blue_oak > redwood_tree
 redwood_tree != 25
 
 ## Create some basic if statements 
-burrito <- 2.4
+burrito <- 1.5
 
-if(burrito > 2) {
+if (burrito > 2) {
   print("I love burritos!")
+} else if (burrito == 1) {
+  print("Not enough burritos")
+} else if (burrito < 2) {
+  print("Need more burritos")
 }
-
-# if (burrito > 2) 
-#  print("I love burritos!")
-# else if (burrito == 2.4) 
-#  print("Not enough burritos")
-# else if (burrito < 2)
-#  print("Need more burritos")
 
 ## gray whale, blue whale, whale
 sbc_observations <- c("blue whale", "gray whale", "whale", "gray whale", "dolphin", "sea lion", "blue whale")
@@ -41,10 +38,9 @@ str_detect(sbc_observations, pattern = "whale")
 # An example of str_detect() within a conditional statement
 phrase <- "I really love tacos!"
 
-if (str_detect(phrase, "data")) {
+if (str_detect(phrase, "tacos")) {
   print("Cool me too.")
 }
-
 
 # If-else statements 
 pika <- 45
@@ -58,7 +54,7 @@ if (pika > 60) {
 # Create a string `food <- "I love enchiladas!"`
 # Write an if-else statement that prints "Yay burritos" if the string "burritos" is detected in 'food', or prints "What about burritos?" otherwise.
 
-food <- "I love veggie burritos!"
+food <- "I love enchiladas!"
 
 if (str_detect(food, "burritos")) {
   print("Yay burritos")
