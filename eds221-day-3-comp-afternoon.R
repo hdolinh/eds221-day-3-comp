@@ -34,22 +34,22 @@ for (i in seq_along(animals)) {
 # Yay you did it on your first try! Now for storing outputs...
 
 species <- c("dog", "elephant", "goat", "dog", "dog", "elephant")
-animal_ages <- vector(mode = "numeric", length = length(species))
+animal_age <- vector(mode = "numeric", length = length(species))
 age_human <- c(3, 8, 4, 6, 12, 18)
 
 for (i in seq_along(species)) {
   if (species[i] == "dog") {
-    animal_ages <- age_human[i] * 7
+    animal_age[i] <- age_human[i] * 7
   } else if (species[i] == "elephant") {
-    animal_ages <- age_human[i] * 0.88
+    animal_age[i] <- age_human[i] * 0.88
   } else if (species[i] == "goat") {
-    animal_ages <- age_human[i] * 4.7
-  } 
-  animal_ages[i] <- animal_ages
+    animal_age[i] <- age_human[i] * 4.7
+  }
 }
 
+animal_age
+
 # remember you don't need print() in for loops
-# I have NA....don't know why
 
 ## Calculate the mean value of each column in a data frame using mtcars ----
 
@@ -57,12 +57,10 @@ mean_mtcars <- vector(mode = "numeric", length = ncol(mtcars))
 
 for (i in 1:ncol(mtcars)) {
   mean_val <- mean(mtcars[[i]], na.rm = TRUE)
-  mean_mtcars <- mean_val
+  mean_mtcars[i] <- mean_val
 }
 
 mean_mtcars
-
-# not getting a data frame...just one solution? should be getting same answers as apply() below
 
 ## Same thing with apply() ----
 
